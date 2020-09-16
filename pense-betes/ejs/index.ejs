@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>My title</title>
+    </head>
+    <body>
+        <%- include('topbar') -%>
+        <h1>Hello  <%= name %></h1>
+        <% if(authenticated) { %>
+            <h1>Je suis connecté</h1>
+        <% } else { %>
+            <h1>Je ne suis pas connecté</h1>
+        <% } %>
+        <% products.forEach( p => { %>
+            <div class='product'>
+                <h1><%= p.title %></h1>
+                <p><%= p.content %></p>
+            </div>
+        <%}) %>
+    </body>
+</html>
